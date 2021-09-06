@@ -1,0 +1,390 @@
+@import "./variables";
+
+body {
+	background-image: url(https://images.alphacoders.com/266/26641.jpg);
+	background-size: cover;
+	color: white;
+	text-decoration: none;
+	font-family: "sans-serif";
+	.container-fluid {
+		overflow: hidden;
+		.main {
+			h1 {
+				font-size: 2rem;
+				color: black;
+				background: orange;
+				width: fit-content;
+				padding: 0.1em 0.2em 0.1em 0.2em;
+				border-radius: 20px;
+			}
+			margin-top: 5em;
+			overflow: hidden;
+			.main__row {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				& .main__column--fabricantes {
+					& h1 {
+						margin-bottom: 2em;
+					}
+
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					& img {
+						width: 15em;
+						height: 10em;
+						border-radius: 25px !important;
+						border: 4px solid black;
+					}
+					.main__textos {
+						background: orange;
+						opacity: 0.9;
+						color: black;
+						border-radius: 15px;
+						padding: 0.5em;
+					}
+				}
+				& .main__encabezado--galeria {
+					text-align: center;
+					margin-bottom: 2em;
+					margin-left: 2.7em;
+				}
+				& .main__imagenesConTexto {
+					margin-bottom: 2em;
+					border: 0.2em solid black;
+					background: orange;
+					border-radius: 30px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					& img {
+						margin-top: 1em;
+						border-radius: 15px !important;
+					}
+					& img:hover {
+						transform: scale(1.5, 1.5);
+					}
+					& p {
+						width: 80%;
+						color: black;
+					}
+					& .main__href--galeria {
+						margin-top: auto;
+						margin-bottom: 1em;
+						text-decoration: none;
+						color: orange;
+						background: black;
+						border-radius: 20px;
+						border: 3px solid rgb(153, 145, 145);
+						padding: 0.5em;
+						text-align: center;
+					}
+					.main__href--galeria:hover {
+						transform: scale(1.1, 1.1);
+						background: rgb(70, 66, 66);
+						color: orange;
+					}
+				}
+			}
+			.main__taller--principal {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				& p {
+					background: orange;
+					opacity: 0.9;
+					color: black;
+					border-radius: 25px;
+					padding: 1em;
+					margin-top: 2em;
+					border: 3px solid black;
+				}
+				& img {
+					margin-top: 2em;
+				}
+			}
+			.main__column--inicio {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				p {
+					background: orange;
+					opacity: 0.9;
+					color: black;
+					border-radius: 25px;
+					border: 3px black solid;
+					padding: 1em;
+				}
+				img {
+					border-radius: 30px !important;
+					margin-top: 2em;
+				}
+				iframe {
+					border-radius: 30px;
+					margin-top: 2em;
+				}
+			}
+		}
+		.main__contacto {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.main__form {
+			display: flex;
+			flex-direction: column;
+			background: $colorNaranja;
+			color: $colorNegro;
+			border: 0.5em solid $colorNegro;
+			padding: 0.5em;
+			border-radius: 30px;
+			margin-bottom: 20vh;
+			margin-top: 15vh;
+			text-align: center;
+			.main__select {
+				background: $colorNegro;
+				color: white;
+			}
+
+			.main__checkBox {
+				margin-left: 38vw;
+				margin-bottom: 1%;
+			}
+
+			.main__textarea {
+				@extend .main__select;
+				margin-top: 4vh;
+			}
+
+			.main__input {
+				@extend .main__select;
+				margin-top: 3%;
+				border-radius: 30px;
+				width: 75%;
+				margin-left: 12%;
+				text-align: center;
+			}
+		}
+		.main__historia {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			& img {
+				margin-top: 1em;
+				border-radius: 30px !important;
+				width: 20em;
+				height: 15em;
+			}
+			& p {
+				margin-top: 1em;
+				background: orange;
+				opacity: 0.9;
+				color: black;
+				border-radius: 30px;
+				padding: 1em;
+				border: 3px solid black;
+			}
+			& .main__href--galeria {
+				margin-top: auto;
+				margin-bottom: 1em;
+				text-decoration: none;
+				color: orange;
+				background: black;
+				border-radius: 20px;
+				border: 3px solid rgb(153, 145, 145);
+				padding: 0.5em;
+				text-align: center;
+			}
+			.main__href--galeria:hover {
+				transform: scale(1.1, 1.1);
+				background: rgb(70, 66, 66);
+				color: orange;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 420px) {
+	.main__row {
+		& .main__column--fabricantes {
+			max-width: 80%;
+		}
+	}
+	.main__encabezado--galeria {
+		margin-left: 4em !important;
+	}
+}
+
+@media screen and(min-width:768px) {
+	.main__form {
+		width: 100%;
+	}
+	.main__contacto {
+		max-width: 50%;
+	}
+	.main__row {
+		& .main__column--fabricantes {
+			max-width: 45%;
+			& img {
+				margin-top: 2em;
+			}
+		}
+	}
+	.main__historia {
+		max-width: 60%;
+	}
+	.main__encabezado--galeria {
+		margin-left: 8.5em !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.main__encabezado--galeria {
+		margin-left: 12em !important;
+	}
+	main {
+		.main__column--inicio {
+			max-width: 50%;
+		}
+		.main__section {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			& .main__imagenesConTexto {
+				max-width: 45%;
+				margin-left: 1.5em;
+				font-size: 1.2rem;
+			}
+		}
+		.main__row {
+			& .main__column--fabricantes {
+				& img {
+					margin-left: 3em;
+				}
+				& p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		.main__taller--principal {
+			max-width: 50%;
+			& p {
+				font-size: 1.2rem;
+			}
+		}
+		.main__historia {
+			max-width: 45%;
+			& p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header__nav {
+		width: 94% !important;
+		a {
+			margin-left: 5em !important;
+		}
+	}
+	.main__encabezado--galeria {
+		margin-left: 16.5em !important;
+	}
+	.main__section {
+		& .main__imagenesConTexto {
+			max-width: 30%;
+			margin-left: 1.5em;
+			font-size: 1.2rem;
+			& img {
+				height: 15em;
+				width: 20em;
+			}
+		}
+	}
+	.main__contacto {
+		max-width: 35%;
+	}
+	.main__row {
+		& .main__column--fabricantes {
+			max-width: 30%;
+		}
+	}
+	.main__historia {
+		img {
+			width: 30em !important;
+			height: 20em !important;
+		}
+	}
+}
+
+@media screen and (min-width: 1680px) {
+	.main__encabezado--galeria {
+		margin-left: 16em !important;
+		font-size: 3rem !important;
+	}
+	.main__column--inicio {
+		max-width: 40% !important;
+		& iframe {
+			height: 30em;
+		}
+		& p {
+			font-size: 1.5rem;
+		}
+	}
+	.main--layoutGaleria {
+		margin-left: 0em;
+		margin-top: 5em;
+		max-width: 100%;
+		.main__section {
+			& .main__imagenesConTexto {
+				max-width: 30%;
+				margin-left: 1.5em;
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.main__contacto {
+		max-width: 30%;
+	}
+	.main__row {
+		& .main__column--fabricantes {
+			& img {
+				margin-left: 7em !important;
+			}
+			& p {
+				font-size: 1.4rem !important;
+			}
+		}
+	}
+	.main__taller--principal {
+		& p {
+			font-size: 1.4rem !important;
+		}
+	}
+	.main__historia {
+		max-width: 50% !important;
+		img {
+			margin-left: 7.1em !important;
+		}
+		p {
+			font-size: 1.5rem !important;
+		}
+		a {
+			font-size: 1.5rem;
+			margin-top: 1em !important;
+		}
+	}
+	.main__form {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	main {
+		.main__encabezado--galeria {
+			margin-left: 14.5em !important;
+		}
+	}
+}

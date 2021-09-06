@@ -1,0 +1,39 @@
+@import "./variables";
+
+.header__row {
+	position: fixed;
+	width: 107vw;
+	z-index: 2;
+
+	.header__nav {
+		background: $colorNegro;
+		border-bottom: 0.2em solid;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(to left, #fc4a1a, #f7b733);
+	}
+	.header__a {
+		color: $colorNaranja;
+		font-size: 0.8rem;
+		font-family: "Noto Sans KR", "sans-serif";
+		margin-left: -0.3em;
+	}
+	.header__a:hover {
+		color: orangered;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	body {
+		.header__a--posicion {
+			margin-right: 3.5em;
+		}
+		.header__nav {
+			margin-right: 9em;
+		}
+		& .header__column {
+			a {
+				font-size: 1.2rem !important;
+			}
+		}
+	}
+}

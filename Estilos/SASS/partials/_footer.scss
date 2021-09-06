@@ -1,0 +1,30 @@
+@import "./variables";
+
+.footer__row {
+	background: $colorNegro;
+	border-top: 0.2em solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to left, #fc4a1a, #f7b733);
+	.footer__ul {
+		justify-content: space-around;
+		.footer__a {
+			color: white;
+			font-family: "Noto Sans KR", "sans-serif";
+		}
+		.footer__a:hover {
+			color: orangered;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	footer {
+		.footer__ul {
+			justify-content: center !important;
+			margin-right: 10em;
+			.footer__a {
+				margin-left: 5em !important;
+			}
+		}
+	}
+}
